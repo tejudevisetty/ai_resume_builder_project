@@ -101,7 +101,7 @@ export function ResumeForm(){
             formJobtitle: ''
         },
         onSubmit: (values) => {
-            axios.patch(`http://127.0.0.1:5000/userDetails/${params.id}`, values)
+            axios.patch(`https://ai-resume-builder-project-server.onrender.com/userDetails/${params.id}`, values)
 
             navigate(`/resumepreview/${params.id}`)
         },
