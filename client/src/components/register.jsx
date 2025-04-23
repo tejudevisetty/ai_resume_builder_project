@@ -16,7 +16,7 @@ export function RegisterUser(){
 
         },
         onSubmit: (values) => {
-            axios.post(`http://127.0.0.1:5000/userDetails`, values)
+            axios.post(`https://ai-resume-builder-project-server.onrender.com/userDetails`, values)
             .then((response) => {
                 console.log("User details are:", response.data);
                 navigate('/login');
