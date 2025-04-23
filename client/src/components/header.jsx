@@ -22,7 +22,7 @@ export function Header(){
             <header className="bg bg-white" >
           <nav className=" navbar container-fluid">
             {/* <h3><Link to='/' className=" navbar-brand m-2">QuickCV</Link></h3> */}
-            <img src="/my-logo.png" alt="logo-img" onClick={() => {navigate('/')}} style={{cursor: "pointer"}}  ></img>
+            <img src="/my-logo.PNG" alt="logo-img" onClick={() => {navigate('/')}} style={{cursor: "pointer"}}  ></img>
             <div>
             {
                 cookies.emailId?
