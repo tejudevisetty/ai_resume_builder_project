@@ -12,7 +12,7 @@ const { MongoClient, ObjectId } = require('mongodb');
 const app = express();
 app.use(cors(
   {
-    origin: 'http://localhost:3000', // React app running on localhost:3000
+    origin: '*', // React app running on localhost:3000
   methods: 'GET,POST,PUT,DELETE,PATCH', // Allowed methods
   credentials: true 
   }
