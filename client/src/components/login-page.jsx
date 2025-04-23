@@ -16,7 +16,7 @@ export function LoginPage(){
             pwd: '',
         },
         onSubmit: (values) => {
-            axios.get(`http://127.0.0.1:5000/userDetails`).then((res) => {
+            axios.get(`https://ai-resume-builder-project-server.onrender.com/userDetails`).then((res) => {
 
                 let userDetailss = res.data.users.find( user => 
                     values.email === user.email
