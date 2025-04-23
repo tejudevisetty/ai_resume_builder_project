@@ -14,7 +14,7 @@ export function Resumehomepage(){
         const payload = {
             templateId: templateId
         }
-        axios.patch(`http://127.0.0.1:5000/userDetails/${params.id}`, payload)
+        axios.patch(`https://ai-resume-builder-project-server.onrender.com/userDetails/${params.id}`, payload)
         .then ( (response) => {
             console.log("all details are sent", response.data)
             navigate(`/resumeform/${params.id}`)
