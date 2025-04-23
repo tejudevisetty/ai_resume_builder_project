@@ -10,7 +10,7 @@ export function ResumePreview() {
   const resumeRef = useRef();
 
   useEffect(() => {
-    axios.get(`http://127.0.0.1:5000/userDetails/${params.id}`)
+    axios.get(`https://ai-resume-builder-project-server.onrender.com/userDetails/${params.id}`)
       .then((res) => {
         console.log("Response data is", res.data);
         console.log("template id is:", res.data.templateId);
