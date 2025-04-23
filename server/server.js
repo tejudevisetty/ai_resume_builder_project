@@ -3,16 +3,16 @@
 const express = require('express');
 
 
+
 const cors = require('cors');
 const { MongoClient, ObjectId } = require('mongodb');
 
-
-
-
 const app = express();
+  
+
 app.use(cors(
   {
-    origin: 'http://localhost:3000', // React app running on localhost:3000
+    origin: "*",
   methods: 'GET,POST,PUT,DELETE,PATCH', // Allowed methods
   credentials: true 
   }
@@ -107,6 +107,7 @@ app.patch("/userDetails/:id", async (req, res) => {
     res.status(500).send("Internal Server Error");
   }
 });
+
 
 
 // Start the server
