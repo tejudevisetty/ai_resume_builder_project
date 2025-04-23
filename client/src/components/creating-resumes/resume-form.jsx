@@ -1,7 +1,7 @@
 import { useFormik } from "formik";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
-import { AIChatSession } from "../AIModal";
+import {AIChatSession} from "../AIModal";
 
 export function ResumeForm(){
 
