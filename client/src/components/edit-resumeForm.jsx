@@ -16,7 +16,7 @@ export function EditForm(){
 
 
         useEffect(() => {
-            axios.get(`http://127.0.0.1:5000/userDetails/${params.id}`)
+            axios.get(`https://ai-resume-builder-project-server.onrender.com/userDetails/${params.id}`)
             .then((res) => {
                 setEditdata(res.data);
             })
@@ -109,7 +109,7 @@ export function EditForm(){
         },
         enableReinitialize: true,
         onSubmit : (values) => {
-            axios.patch(`http://127.0.0.1:5000/userDetails/${params.id}`, values)
+            axios.patch(`https://ai-resume-builder-project-server.onrender.com/userDetails/${params.id}`, values)
             .then((res)=> {
                 console.log("Response data is:", res.data)
                 navigate(`/resumepreview/${params.id}`);
