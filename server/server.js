@@ -108,12 +108,6 @@ app.patch("/userDetails/:id", async (req, res) => {
   }
 });
 
-axios.post('https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent', data, {
-  headers: {
-    'Authorization': `Bearer ${process.env.REACT_APP_GEMINI_API_KEY}`,
-  }
-});
-
 
 // Start the server
 const PORT = process.env.PORT || 5000;
