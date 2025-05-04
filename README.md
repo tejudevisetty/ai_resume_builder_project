@@ -1,4 +1,4 @@
-# 🧠 AI Resume Builder
+# 🧠 AI Resume Builder (Saas)
 
 Welcome to the **AI Resume Builder** – an intelligent, easy-to-use platform that helps you create a standout resume in minutes using AI!
 
