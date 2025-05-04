@@ -33,31 +33,36 @@ export function ResumePreview() {
 
   if (userData.templateId === "t2") {
     return (
-      <div className=" mt-5" >
+      <div className=" mt-5 bg-body-secondary" > 
         <div className=" mt-4">  .</div>
         <div className=" text-center mt-3" ><h3>Step 3</h3>
           <p className="  fs-4 custom-color" >Preview & Download</p>
         </div>
-        <div className="template-container form p-4" ref={resumeRef}>
-          <h1 className="name text-center   custom">{userData.formName.toUpperCase()}</h1>
+        <div className="template-container bg-white p-4" ref={resumeRef}>
+          <h1 className="user-name text-center   custom">{userData.formName.toUpperCase()}</h1>
           <div className="contact-info d-flex justify-content-center ">
-            <p className=" fw-bold" > {userData.formNumber}  | {userData.formEmail} | {userData.formUrl} </p>
+            {/* <p className=" fw-bold" > {userData.formNumber}  | {userData.formEmail} | {userData.formUrl} </p> */}
+            <num className="mt-1" >{userData.formNumber}</num>
+            <ul className="d-flex gap-4 mt-1" >
+              <li>{userData.formEmail}</li>
+              <li>{userData.formUrl}</li>
+            </ul>
           </div>
-          <h3 className="section-title custom">OBJECTIVE</h3>
+          <h3 className="section-title-2 custom">OBJECTIVE</h3> 
           <p className="summary">
             {userData.formSummary}
           </p>
           
 
-          <h3 className="section-title custom">EDUCATION</h3>
+          <h3 className="section-title-2 custom">EDUCATION</h3>
           <div className=" d-flex justify-content-between" >
-            <p><strong>{userData.formGraduation  } | {userData.formMajor}</strong></p>
+            <p><strong>{userData.formGraduation  } , {userData.formMajor}</strong></p>
             <p className="fw-bold" >{userData.formEduStartdate} - {userData.formEduEnddate}</p>
 
           </div>
-          <p>{userData.formCollegeName} - {userData.formBtechPer || "70%"}</p>
+          <p>{userData.formCollegeName} - {userData.formBtechPer}</p>
 
-          <h3 className="section-title custom">SKILLS</h3>
+          <h3 className="section-title-2 custom">SKILLS</h3>
           <div>
             <ul className="mb-3 mt-3">
               {(userData.formSkill || "").split('\n').map((line, index) => {
@@ -73,10 +78,10 @@ export function ResumePreview() {
           </div>
 
 
-          <h3 className="section-title mt-2 custom">EXPERIENCE</h3>
+          <h3 className="section-title-2 mt-2 custom">EXPERIENCE</h3>
           <div className="d-flex justify-content-between" >
 
-          <p><strong> {userData.formDesignation} | {userData.formCompany} </strong></p>
+          <p><strong> {userData.formDesignation} , {userData.formCompany} </strong></p>
           <p className=" fw-bold" >{userData.formStartdate} - {userData.formEnddate}</p>
 
 
@@ -85,7 +90,7 @@ export function ResumePreview() {
                 <li>{userData.formExpSummary}</li>
           </ul>
 
-          <h3 className="section-title custom">PROJECTS</h3>
+          <h3 className="section-title-2 custom">PROJECTS</h3>
           <p className=" fw-bold " >{userData.formProject}</p>
           <ul >
             
@@ -98,7 +103,7 @@ export function ResumePreview() {
 
             <div>
 
-              <h3 className="section-title custom" >CERTIFICATES</h3>
+              <h3 className="section-title-2 custom" >CERTIFICATES</h3>
               <p>{userData.formCertificate}</p>
 
             </div>
@@ -113,10 +118,12 @@ export function ResumePreview() {
 
         
         </div>
-        <div className=" d-flex justify-content-end mb-3 " >
+        <div className=" d-grid mb-3 mt-3" >
+          <button className="ai-btn w-25 custom-btn p-2 mt-3 fw-bold " style={{marginLeft: '42%'}} onClick={handleDownload}>DOWNLOAD</button>
 
-        <button className="get-started p-1 mt-5 w-25 mx-3 fw-bold" onClick={handleDownload}>Download</button>
-        <Link to={`/editResumeform/${params.id}`} className=" btn get-started w-25 p-1 mt-5 fw-bold">Edit</Link>
+          
+          <Link to={`/editResumeform/${params.id}`} className="btn ai-btn w-25 custom-btn  p-2 mt-2 fw-bold" style={{marginLeft: '42%'}} >EDIT RESUME</Link>
+
 
         </div>
 
@@ -125,13 +132,13 @@ export function ResumePreview() {
     );
   } else {
     return (
-      <div className=" mt-5" >
+      <div className=" mt-5 bg-body-secondary" >
         <div className=" mt-4">  .</div>
         <div className=" text-center mt-3" ><h3>Step 3</h3>
           <p className="  fs-4 custom-color" >Preview & Download</p>
         </div>
-        <div className="template-container mt-5 form p-4" ref={resumeRef}>
-          <h1 className="name text-center">{userData.formName}</h1>
+        <div className="template-container bg-white mt-3 p-4" ref={resumeRef}>
+          <h1 className="text-black fs-3 fw-bold text-center">{userData.formName}</h1>
           <h2 className="title">{userData.formDesignation}</h2>
           <div className="contact-info d-flex justify-content-center ">
             <p className=" fw-bold" > {userData.formNumber}  | {userData.formEmail} | {userData.formUrl} </p>
@@ -168,7 +175,7 @@ export function ResumePreview() {
           <ul>
                 <li>{userData.formExpSummary}</li>
           </ul>
-
+ 
           <h3 className="section-title">EDUCATION</h3>
           <div className=" d-flex justify-content-between" >
             <p><strong>{userData.formGraduation } | {userData.formMajor}</strong></p>
@@ -206,10 +213,12 @@ export function ResumePreview() {
         
         </div>
 
-        <div className=" d-flex justify-content-end mb-3 " >
+        <div className=" d-grid mb-3 mt-3" >
+          <button className="ai-btn w-25 custom-btn p-2 mt-3 fw-bold " style={{marginLeft: '42%'}} onClick={handleDownload}>DOWNLOAD</button>
 
-        <button className="get-started p-1 mt-5 w-25 mx-3 fw-bold" onClick={handleDownload}>Download</button>
-        <Link to={`/editResumeform/${params.id}`} className=" btn get-started w-25 p-1 mt-5 fw-bold">Edit</Link>
+          
+          <Link to={`/editResumeform/${params.id}`} className="btn ai-btn w-25 custom-btn  p-2 mt-2 fw-bold" style={{marginLeft: '42%'}} >EDIT RESUME</Link>
+
 
         </div>
       </div>
