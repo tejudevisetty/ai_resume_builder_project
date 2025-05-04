@@ -105,7 +105,7 @@ export function HomePage(){
               <div className="accordion-item">
                 <h2 className="accordion-header">
                   <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                    What is a Resume Builder
+                    What is a Resume Builder?
                   </button>
                 </h2>
                 <div id="flush-collapseOne" className="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
@@ -132,7 +132,10 @@ Jobseeker’s resume builder goes a step further. It includes AI-powered suggest
                   </button>
                 </h2>
                 <div id="flush-collapseThree" className="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+
                   <div className="accordion-body">Yes we can build resume with AI through this website..</div>
+
+
                 </div>
               </div>
 
