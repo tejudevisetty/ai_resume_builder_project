@@ -135,7 +135,7 @@ Jobseeker’s resume builder goes a step further. It includes AI-powered suggest
 
                   <div className="accordion-body">Yes we can build resume with AI through this website..</div>
 
-
+ 
                 </div>
               </div>
 

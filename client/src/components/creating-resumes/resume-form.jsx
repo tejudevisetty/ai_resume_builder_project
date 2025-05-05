@@ -40,17 +40,23 @@ export function ResumeForm(){
 
     }
 
-    const GenerateProSummaryFromAI = async() => {
-
+    const GenerateProSummaryFromAI = async () => {
         const PROMPT = prompt1
-        .replace('{jobTitle}', formik.values.formDesignation)
-        .replace('{companyName}', formik.values.formCompany);
+          .replace('{jobTitle}', formik.values.formDesignation)
+          .replace('{companyName}', formik.values.formCompany);
+      
         const result1 = await AIChatSession.sendMessage(PROMPT);
-        const summary1 = JSON.parse(result1.response.text());
+      
+        const responseText = await result1.response.text();
+      
+    
+        const summary1 = JSON.parse(responseText);
+      
         const finalResult1 = summary1.experienceSummary;
+      
         formik.setFieldValue('formExpSummary', finalResult1); 
-
-    }
+      }
+      
 
     const GenerateSkills = async () => {
         const PROMPT = skillsPrompt.replace('{jobTitle}', formik.values.formJobtitle);
